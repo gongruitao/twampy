@@ -793,7 +793,7 @@ if __name__ == '__main__':
 
     if options.dscp:
         if options.dscp in dscpmap:
-            options.tos = dscpmap[options.dscp]
+            options.tos = dscpmap[options.dscp] << 2
         else:
             parser.error("Invalid DSCP Value '%s'" % options.dscp)
 
